@@ -11,4 +11,4 @@ X_test = np.array([3,4])
 plt.figure() # Define a new figure
 plt.scatter(X_train[:,0], X_train[:,1], s = 170, color = Y_train[:])
 plt.scatter(X_test[0], X_test[1], s = 170, color = 'green')
-plt.show() # Display plot
+plt.show() # Display the plot
