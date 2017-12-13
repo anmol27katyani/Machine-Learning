@@ -12,3 +12,11 @@ plt.figure() # Define a new figure
 plt.scatter(X_train[:,0], X_train[:,1], s = 170, color = Y_train[:])
 plt.scatter(X_test[0], X_test[1], s = 170, color = 'green')
 plt.show() # Display the plot
+
+num = len(X_train) # Compute the number of points in X_train
+distance = np.zeros(num) # Initialize a numpy arrays of zeros
+for i in range(num):
+    distance[i] = dist(X_train[i], X_test) # Compute distance from X_train[i] to X_test
+print(distance)
+min_index = np.argmin(distance) # Get the index with smallest distance
+print(Y_train[min_index])
